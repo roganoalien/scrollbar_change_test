@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scrollbar change test</title>
+  <link rel="stylesheet" href="perfect-scrollbar.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="jquery.mousewheel.js"></script>
+  <script src="jquery.jscrollpane.min.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      $('.scroll-pane').jScrollPane();
+    });
+  </script>
+  <style>
+    .cuadro {
+      width: 90%;
+      height: 200px;
+      position: relative;
+      background: black;
+      padding: 2em;
+      margin: 0;
+    }
+    .cuadrito {
+      width: 200%;
+      height: 300px;
+      background: purple;
+      padding: 2em;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="cuadro" id="contenedor">
+    <div class="cuadrito"></div>
+  </div>
+  <script src="perfect-scrollbar.min.js"></script>
+  <script type="text/javascript">
+    Ps.initialize(document.getElementById('contenedor'));
+  </script>
+</body>
+</html>
